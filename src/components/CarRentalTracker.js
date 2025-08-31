@@ -126,16 +126,16 @@ const CarRentalTracker = () => {
           <h3>Bu Həftə</h3>
           <div className="stat-item">
             <span>Gəlir:</span>
-            <span className="income">{weeklyStats.income.toFixed(2)} ₼</span>
+                         <span className="income">{weeklyStats.income.toFixed(2)} zł</span>
           </div>
           <div className="stat-item">
             <span>Xərc:</span>
-            <span className="expense">{weeklyStats.expense.toFixed(2)} ₼</span>
+                         <span className="expense">{weeklyStats.expense.toFixed(2)} zł</span>
           </div>
           <div className="stat-item">
             <span>Mənfəət:</span>
             <span className={weeklyStats.profit >= 0 ? 'profit' : 'loss'}>
-              {weeklyStats.profit.toFixed(2)} ₼
+                             {weeklyStats.profit.toFixed(2)} zł
             </span>
           </div>
         </div>
@@ -144,16 +144,16 @@ const CarRentalTracker = () => {
           <h3>Bu Ay</h3>
           <div className="stat-item">
             <span>Gəlir:</span>
-            <span className="income">{monthlyStats.income.toFixed(2)} ₼</span>
+                         <span className="income">{monthlyStats.income.toFixed(2)} zł</span>
           </div>
           <div className="stat-item">
             <span>Xərc:</span>
-            <span className="expense">{monthlyStats.expense.toFixed(2)} ₼</span>
+                         <span className="expense">{monthlyStats.expense.toFixed(2)} zł</span>
           </div>
           <div className="stat-item">
             <span>Mənfəət:</span>
             <span className={monthlyStats.profit >= 0 ? 'profit' : 'loss'}>
-              {monthlyStats.profit.toFixed(2)} ₼
+                             {monthlyStats.profit.toFixed(2)} zł
             </span>
           </div>
         </div>
@@ -187,7 +187,7 @@ const CarRentalTracker = () => {
         <div className="form-row">
           <input
             type="number"
-            placeholder="Məbləğ (₼)"
+                         placeholder="Məbləğ (zł)"
             value={newRecord.amount}
             onChange={(e) => setNewRecord({...newRecord, amount: e.target.value})}
           />
@@ -237,7 +237,7 @@ const CarRentalTracker = () => {
                   </span>
                   <span>{record.description}</span>
                   <span className={record.type === 'income' ? 'income' : 'expense'}>
-                    {record.amount.toFixed(2)} ₼
+                                         {record.amount.toFixed(2)} zł
                   </span>
                   <button 
                     onClick={() => deleteRecord(record.id)}
